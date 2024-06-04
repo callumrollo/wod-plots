@@ -7,7 +7,7 @@ _log = logging.getLogger(__name__)
 
 base = "https://www.ncei.noaa.gov/data/oceans/ncei/wod"
 logfile = 'wod-download.log'
-"    downloads files from the world ocean database for the specified year"
+
 
 def extract_year(year, save_nc=False):
     """
