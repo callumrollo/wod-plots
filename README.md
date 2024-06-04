@@ -12,7 +12,7 @@ I couldn't find code to make this plot so I wrote these Python scripts. Feel fre
 
 The script `download_wod.py` will download all the source data files from https://www.ncei.noaa.gov/data/oceans/ncei/wod to make the plot. By default it will only save the lon, lat and time columns to save space. It totals to less than 2 GB. If you choose to keep the full nc files it will take up around 180 GB of disk space. If interrupted, it will resume from the next file.
 
-It took me several days for the download process to run. The script `retry.py` will re-run the abose script if it has crashed. Works well as a cron job. It might need some path tweaking to run on you machine. Works well on a remote server
+It took me several days for the download process to run. The script `retry.py` will re-run the above script if it has crashed. Works well as a cron job. It might need some path tweaking to run on you machine. Works well on a remote server
 
 The notebook `make-plot.ipynb` makes the plot from the downloaded files.
 
@@ -38,3 +38,11 @@ https://imdis.seadatanet.org/content/download/171431/file/IMDIS2024_programme_V4
 ### References
 
 This work uses data from NCEI Standard Product: World Ocean Database (WOD) https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.nodc:NCEI-WOD
+
+### Disclaimers
+
+This plot only shows data from the World Ocean Database. This is not a comprehensive, or even necessarily representative view of all oceanographic profiles taken in a given year.
+
+No data integrity checks have been made against the original datasets, some data may have been missed.
+
+I make no claim to the original data shown in this plot, or the idea to create it. See the above sections for references to the orginal works.
