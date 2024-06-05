@@ -3,3 +3,4 @@ pandas
 requests
 netcdf4
 cftime
+pyarrow
