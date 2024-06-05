@@ -40,3 +40,11 @@ https://imdis.seadatanet.org/content/download/171431/file/IMDIS2024_programme_V4
 ### References
 
 This work uses data from NCEI Standard Product: World Ocean Database (WOD) https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.nodc:NCEI-WOD
+
+### Disclaimers
+
+This plot only shows data from the World Ocean Database. This is not a comprehensive, or even necessarily representative view of all oceanographic profiles taken in a given year.
+
+No data integrity checks have been made against the original datasets, some data may have been missed.
+
+I make no claim to the original data shown in this plot, or the idea to create it. See the above sections for references to the orginal works.
