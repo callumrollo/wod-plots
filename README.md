@@ -12,7 +12,9 @@ I couldn't find code to make this plot so I wrote these Python scripts. Feel fre
 
 The script `download_wod.py` will download all the source data files from https://www.ncei.noaa.gov/data/oceans/ncei/wod to make the plot. By default it will only save the lon, lat and time columns to save space. It totals to less than 2 GB. If you choose to keep the full nc files it will take up around 180 GB of disk space. If interrupted, it will resume from the next file.
 
-It took me several days for the download process to run. The script `retry.py` will re-run the abose script if it has crashed. Works well as a cron job. It might need some path tweaking to run on you machine. Works well on a remote server
+It took me several days for the download process to run. The script `retry.py` will re-run the abose script if it has crashed. Works well as a cron job. It might need some path tweaking to run on you machine. Best run on a remote server
+
+**shortcut** you can download the processed dataset here [http://callumrollo.com/files/wod_by_year.pqt](http://callumrollo.com/files/wod_by_year.pqt). Last updated april 2024.
 
 The notebook `make-plot.ipynb` makes the plot from the downloaded files.
 
