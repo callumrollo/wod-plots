@@ -22,7 +22,7 @@ def extract_year(year, save_nc=False):
 
     for ds_type in ("osd", "mbt", "xbt", "ctd", "mrb","apb", "gld", "pfl", "drb", "uor"):
         ds_name = f"wod_{ds_type}_{year}"
-        fn = downloads_dir / f"{ds_name}.csv"
+        fn = downloads_dir / f"{ds_name}.pqt"
         if save_nc:
             dfn = downloads_dir / f"{ds_name}.nc"
         else:
@@ -38,8 +38,8 @@ def extract_year(year, save_nc=False):
         with open(dfn, 'wb') as f:
             f.write(response.content)
         ds = xr.open_dataset(dfn)
-        df = pd.DataFrame({"ds_name": ds_name, "lon": ds.lon.values, "lat": ds.lat.values, "time": ds.time.values})
-        df.to_csv(fn, index=False)
+        df = pl.DataFrame({"ds_name": ds_name, "lon": ds.lon.values, "lat":ds.lat.values, "time": ds.time.values, "country": ds.country.values})
+        df.write_parquet(fn)
         _log.info(f"Downloaded {ds_name}")
 
 
